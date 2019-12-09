@@ -47,7 +47,7 @@ for i in [1, 3, 5, 10]:
     viola_jones = ViolaJones(i)
     viola_jones.train_adaboost(training, 499, 2000)
     evaluate(viola_jones, training)
-    viola_jones.save(str(no_of_detectors))
+    viola_jones.save(str(i))
     classifer = ViolaJones.load(str(i))
     evaluate(classifer, test)
 
